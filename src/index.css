@@ -1,13 +1,34 @@
+@font-face {
+  font-family: DINMedium;
+  src: url("../public/fonts/DIN_Medium.ttf");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  background-color: #000;
+  color: #aaa;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "DINMedium", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.slider {
+  height: 300px;
+  width: 80%;
+  background-image: url("../public/galaxy.jpg");
+}
+.main-header {
+  justify-content: center;
+flex-direction: column;;
+  align-items: center;
+  display: flex;
+}
+.container{
+  padding: 0 10%;
+}
+.home{
+  padding-bottom: 90px;
 }
