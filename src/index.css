@@ -22,13 +22,17 @@ body {
 }
 .main-header {
   justify-content: center;
-flex-direction: column;;
+  flex-direction: column;
   align-items: center;
   display: flex;
 }
-.container{
+.container {
   padding: 0 10%;
 }
-.home{
+.home {
   padding-bottom: 90px;
 }
+#openingcrawl h4 {
+  line-height: 200%;
+}
+

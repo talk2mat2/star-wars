@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = ({ charact = [], title }) => {
+const Table = ({ charact = [], title, openingcrawl }) => {
   const [assend, setAssend] = React.useState(true);
   const [staged, setStaged] = React.useState([]);
 
@@ -31,9 +31,18 @@ const Table = ({ charact = [], title }) => {
   }, [charact]);
   return (
     <div id="tableContainer">
+      <div id="openingcrawl">
+        <h4>{openingcrawl}</h4>
+      </div>
       <div className="d-flex flex-row justify-between items-center flex-wrap">
         {title && <h3>{title} Character list</h3>}{" "}
-        <p>{assend ? <i class="bi bi-caret-down"></i> : <i class="bi bi-caret-up"></i>}</p>
+        <p>
+          {assend ? (
+            <i class="bi bi-caret-down"></i>
+          ) : (
+            <i class="bi bi-caret-up"></i>
+          )}
+        </p>
         <span className="d-flex flex-row items-center">
           <h6>Gender</h6>{" "}
           <select onChange={filterSex}>

@@ -93,6 +93,7 @@ tr:nth-child(odd) {
     transform: translateY(0);
   }
 }
+
 .tb-footer {
   background: rgb(170, 165, 165) !important;
   color: black;
@@ -110,5 +111,8 @@ tr:nth-child(odd) {
   }
   .content{
     justify-content: center;
+  }
+  #openingcrawl h4 {
+    line-height: 100%;
   }
 }

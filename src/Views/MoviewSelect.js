@@ -8,13 +8,17 @@ const Movieselect = ({ data = [] }) => {
     setShow(!show);
   };
 
+  function sortDate(a, b) {
+    return new Date(a.release_date) - new Date(b.release_date);
+  }
   return (
     <section id="select-container">
       <div onClick={openToggle} className="select-box">
         <h3>Select movie</h3>
       </div>
       <li id="movielist" className={`${show && "show"}`}>
-        {show && data?.map((movie) => <MovieItem movie={movie} />)}
+        {show &&
+          data?.sort(sortDate).map((movie) => <MovieItem movie={movie} />)}
       </li>
     </section>
   );

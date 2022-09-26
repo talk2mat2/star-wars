@@ -10,6 +10,7 @@ const Main = () => {
   const [openTable, setOpenTable] = React.useState(false);
   const [loading, setLoading] = React.useState([]);
   const [title, setTitle] = React.useState("");
+  const [openingcrawl, setOpeningcrawl] = React.useState("");
 
   const fetchFilms = async () => {
     setLoading(true);
@@ -24,9 +25,10 @@ const Main = () => {
         setLoading(false);
       });
   };
-  const fetchCharacters = async (char = [], title = "") => {
+  const fetchCharacters = async (char = [], title = "", opening_crawl = "") => {
     setLoading(true);
-    setTitle(title)
+    setTitle(title);
+    setOpeningcrawl(opening_crawl);
     setOpenTable(false);
     let charResult = [];
     for (let i = 0; i < char.length; i++) {
@@ -50,7 +52,13 @@ const Main = () => {
         </div>
         <div className="content flex-wrap">
           <Movieselect data={data} />
-          {openTable && <Table charact={charact} title={title} />}
+          {openTable && (
+            <Table
+              charact={charact}
+              title={title}
+              openingcrawl={openingcrawl}
+            />
+          )}
         </div>
       </div>
     </AppContext.Provider>
