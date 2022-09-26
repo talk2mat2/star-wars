@@ -44,7 +44,7 @@ const Main = () => {
     <AppContext.Provider value={{ data, fetchCharacters }}>
       <div className="container home">
         <div className="main-header">
-          <img src="logo.png" alt="" />
+          <img src="logo.png" alt="" className="brand" />
           {loading && <img src="spin.gif" width={20} alt="" />}
           {/* <div className="slider"></div> */}
         </div>
